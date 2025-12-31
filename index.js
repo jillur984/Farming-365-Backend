@@ -1,8 +1,11 @@
 import express from "express"
-
+import dbConnect from "./config/mongoDB.js";
+import dotenv from "dotenv";
 const app=express();
+dotenv.config()
 
 app.use(express());
+dbConnect()
 
 app.get('/api/test', (req, res) => {
   res.send('Hello from Render!');
