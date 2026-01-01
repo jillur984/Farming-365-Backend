@@ -6,8 +6,8 @@ const dbConnect=async()=>{
         mongoose.connection.on("connected",()=>{
             console.log("DB is Connected")
         })
-        
-    await mongoose.connect(process.env.MONGODB_URI)
+        console.log(process.env.MONGODB_URI)
+    await mongoose.connect("mongodb+srv://jillurcsebd_db_user:wAd3AZCwvlQVHUPX@cluster0.a9inank.mongodb.net/farming_DB")
     } catch (error) {
         console.log("Database Connection Error",error)
     }
