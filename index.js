@@ -7,6 +7,7 @@ const app=express();
 dotenv.config()
 
 app.use(express());
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 dbConnect()
 
