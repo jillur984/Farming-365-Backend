@@ -1,10 +1,11 @@
 import express from "express"
 import dbConnect from "./config/mongoDB.js";
 import dotenv from "dotenv";
-import userRouter from "./routes/userRouter.js";
 
-const app=express();
+import userRouter from "./routes/userRouter.js";
 dotenv.config()
+const app=express();
+
 
 
 app.use(express.json())
