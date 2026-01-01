@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 dbConnect()
 
 app.use("/api/test",(req,res)=>{
-  res.send("Hello from Farming")
+  res.send("Hello from Farming...")
 })
 app.use("/api/user", userRouter);
 
