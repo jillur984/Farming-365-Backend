@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["farmer", "agroSpecialist", "admin"],
-      default: "farmer",
+      default: "admin",
     },
     userCart: { type: Object, default: {} },
   },
@@ -19,6 +19,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-const userModel = mongoose.models.user || mongoose.model("user", userSchema);
+const userModel = mongoose.models.user || mongoose.model("User", userSchema);
 
 export default userModel;
